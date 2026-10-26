@@ -1,1 +1,8 @@
+.venv/
+venv/
+**pycache**/
+**/**pycache**/
+.idea/
+.env
 config.py
+*.pyc
