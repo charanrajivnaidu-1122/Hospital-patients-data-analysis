@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hospital Visits</title>
+</head>
+<body>
+
+    <h1>Hospital Visit Records</h1>
+
+    <table border="1">
+        <tr>
+            <th>Visit ID</th>
+            <th>Patient Name</th>
+            <th>Disease</th>
+            <th>Admission Date</th>
+            <th>Discharge Date</th>
+            <th>Treatment Cost</th>
+        </tr>
+
+        {% for visit in visits %}
+        <tr>
+            <td>{{ visit.visit_id }}</td>
+            <td>{{ visit.name }}</td>
+            <td>{{ visit.disease }}</td>
+            <td>{{ visit.admission_date }}</td>
+            <td>{{ visit.discharge_date }}</td>
+            <td>{{ visit.treatment_cost }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="/">Home</a>
+
+</body>
+</html>

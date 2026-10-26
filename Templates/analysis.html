@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hospital Data Analysis</title>
+</head>
+<body>
+
+    <h1>Hospital Patient Data Analysis System</h1>
+
+    <h2>Overall Hospital Statistics</h2>
+
+    <p>Total Patients: {{ total_patients }}</p>
+
+    <p>Total Hospital Visits: {{ total_visits }}</p>
+
+    <p>Total Treatment Cost: {{ total_cost }}</p>
+
+    <p>Today's Hospital Visits: {{ total_visits_today }}</p>
+
+    <hr>
+
+    <h2>Disease-wise Visit Analysis</h2>
+
+    <table border="1">
+        <tr>
+            <th>Disease</th>
+            <th>Number of Visits</th>
+        </tr>
+
+        {% for item in disease_data %}
+        <tr>
+            <td>{{ item.disease }}</td>
+            <td>{{ item.total }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Disease-wise Hospital Visits Chart</h2>
+
+    <img
+        src="{{ url_for('static', filename='charts/disease_chart.png') }}"
+        alt="Disease-wise Hospital Visits Chart"
+    >
+
+    <hr>
+
+    <h2>Date-wise Hospital Visits</h2>
+
+    <table border="1">
+        <tr>
+            <th>Admission Date</th>
+            <th>Number of Visits</th>
+        </tr>
+
+        {% for item in date_wise_visits %}
+        <tr>
+            <td>{{ item.admission_date }}</td>
+            <td>{{ item.total_visits }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Date-wise Hospital Visits Chart</h2>
+
+    <img
+        src="{{ url_for('static', filename='charts/date_chart.png') }}"
+        alt="Date-wise Hospital Visits Chart"
+    >
+
+    <hr>
+
+    <h2>Patients by City Chart</h2>
+
+    <img
+        src="{{ url_for('static', filename='charts/city_chart.png') }}"
+        alt="Patients by City Chart"
+    >
+
+    <br><br>
+
+    <a href="/">Home</a>
+
+</body>
+</html>
+

@@ -1,0 +1,23 @@
+```html
+<table border="1">
+    <tr>
+        <th>Serial No.</th>
+        <th>Patient ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>City</th>
+    </tr>
+
+    {% for patient in patients %}
+    <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ patient[0] }}</td>
+        <td>{{ patient[1] }}</td>
+        <td>{{ patient[2] }}</td>
+        <td>{{ patient[3] }}</td>
+        <td>{{ patient[4] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+```

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Patient</title>
+</head>
+<body>
+
+    <h1>Search Patient</h1>
+
+    <form method="POST">
+
+        <label>Patient ID:</label>
+        <input type="number" name="patient_id" min="1" required>
+
+        <button type="submit">Search</button>
+
+    </form>
+
+    <p>{{ message }}</p>
+
+    {% if patient %}
+        <h2>Patient Details</h2>
+
+        <p>ID: {{ patient.patient_id }}</p>
+        <p>Name: {{ patient.name }}</p>
+        <p>Age: {{ patient.age }}</p>
+        <p>Gender: {{ patient.gender }}</p>
+        <p>City: {{ patient.city }}</p>
+    {% endif %}
+
+    <a href="/">Home</a>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Patient Disease</title>
+</head>
+<body>
+
+    <h1>Update Patient Disease</h1>
+
+    <form method="POST" action="/update_patient_disease">
+
+        <label>Patient ID:</label>
+        <input type="number" name="patient_id" required>
+
+        <br><br>
+
+        <label>New Disease:</label>
+        <input type="text" name="new_disease" required>
+
+        <br><br>
+
+        <button type="submit">Update Disease</button>
+
+    </form>
+
+    <p>{{ message }}</p>
+
+    <br>
+
+    <a href="/">Home</a>
+
+</body>
+</html>
+
